@@ -39,7 +39,7 @@
             <Grid>
                 <TextBox x:Name="endSum" HorizontalAlignment="Center" Margin="0,22,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" IsReadOnly="True"/>
                 <TextBlock HorizontalAlignment="Center" Margin="0,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97"><Run Language="ru-ru" Text="Сумма пар чисел"/></TextBlock>
-                <Button x:Name="startSum" Content="Рассчитать" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" Width="77" Click="startSum_Click"/>
+                <Button x:Name="startSum" Content="Рассчитать" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" Width="97" Click="startSum_Click"/>
                 <Button x:Name="addNumber" Content="Увеличить на Х" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Width="97" Click="addNumber_Click"/>
                 <TextBox x:Name="numberToAdd" HorizontalAlignment="Center" Margin="0,87,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="77"/>
                 <TextBlock HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Text="Введите Х" TextAlignment="Center"/>

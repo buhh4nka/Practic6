@@ -19,23 +19,12 @@ namespace Practic5
         }
         public int First { get; set; }
         public int Second { get; set; }
-        public Pair Sum(Pair firstPair, Pair secondPair)
+        public static Pair operator +(Pair firstPair, Pair secondPair)
         {
-            First = firstPair.First + secondPair.First;
-            Second = firstPair.Second + secondPair.Second;
-            return new Pair(First, Second);
-        }
-        public Pair Sum(Pair firstPair, Pair secondPair, Pair thirdPair)
-        {
-            First = firstPair.First + secondPair.First + thirdPair.First;
-            Second = firstPair.Second + secondPair.Second + thirdPair.Second;
-            return new Pair(First, Second);
-        }
-        public Pair Add()
-        {
-            First += 1;
-            Second += 1;
-            return  new Pair(First, Second);
+            Pair result = new Pair();
+            result.First = firstPair.First + secondPair.First;
+            result.Second = firstPair.Second + secondPair.Second;
+            return result;
         }
         public Pair Add(int number)
         {
@@ -43,13 +32,17 @@ namespace Practic5
             Second += number;
             return new Pair(First, Second);
         }
+        public static Pair operator ++(Pair pair)
+        {
+            pair.First += 1;
+            pair.Second += 1;
+            return pair;
+        }
         public static Pair operator --(Pair pair)
         {
             pair.First -= 1;
             pair.Second -= 1;
             return pair;
         }
-
-        
     }
 }

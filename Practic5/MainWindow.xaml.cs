@@ -52,7 +52,7 @@ namespace Practic5
                 _secondPair.First = firstNumberPair2;
                 _secondPair.Second = secondNumberPair2;
                 Pair endPair = new Pair();
-                endPair.Sum(_firstPair, _secondPair);
+                endPair = _firstPair  + _secondPair;
                 endSum.Text = $"{endPair.First}, {endPair.Second}";
             }
             else
@@ -74,7 +74,7 @@ namespace Practic5
             {
                 _firstPair.First = firstNumber;
                 _firstPair.Second = secondNumber;
-                _firstPair.Add();
+                _firstPair++;
                 firstPairFirstNumber.Text = _firstPair.First.ToString();
                 firstPairSecondNumber.Text = _firstPair.Second.ToString();
                 endSum.Clear();
@@ -96,7 +96,7 @@ namespace Practic5
             {
                 _secondPair.First = firstNumber;
                 _secondPair.Second = secondNumber;
-                _secondPair.Add();
+                _secondPair++;
                 secondPairFirstNumber.Text = _secondPair.First.ToString();
                 secondPairSecondNumber.Text = _secondPair.Second.ToString();
                 endSum.Clear();
@@ -137,6 +137,8 @@ namespace Practic5
             bool isNotErrorInSecond = Int32.TryParse(firstPairSecondNumber.Text, out int secondNumber);
             if (isNotErrorInFirst && isNotErrorInSecond)
             {
+                _firstPair.First = firstNumber;
+                _firstPair.Second = secondNumber;
                 _firstPair--;
                 firstPairFirstNumber.Text = _firstPair.First.ToString();
                 firstPairSecondNumber.Text = _firstPair.Second.ToString();
@@ -156,6 +158,8 @@ namespace Practic5
             bool isNotErrorInSecond = Int32.TryParse(secondPairSecondNumber.Text, out int secondNumber);
             if (isNotErrorInFirst && isNotErrorInSecond)
             {
+                _secondPair.First = firstNumber;
+                _secondPair.Second = secondNumber;
                 _secondPair--;
                 secondPairFirstNumber.Text = _secondPair.First.ToString();
                 secondPairSecondNumber.Text = _secondPair.Second.ToString();
