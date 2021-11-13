@@ -114,8 +114,8 @@ namespace Practic5
             bool isNotErrorInNumber = int.TryParse(numberToAdd.Text, out int number);
             if (isNotErrorInNumber)
             {
-                _firstPair.Add(number);
-                _secondPair.Add(number);
+                _firstPair += number;
+                _secondPair += number;
 
                 firstPairFirstNumber.Text = _firstPair.First.ToString();
                 firstPairSecondNumber.Text = _firstPair.Second.ToString();

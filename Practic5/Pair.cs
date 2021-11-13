@@ -26,12 +26,14 @@ namespace Practic5
             result.Second = firstPair.Second + secondPair.Second;
             return result;
         }
-        public Pair Add(int number)
+        public static Pair operator +(Pair firstPair, int number)
         {
-            First += number;
-            Second += number;
-            return new Pair(First, Second);
+            Pair result = new Pair();
+            result.First = firstPair.First + number;
+            result.Second = firstPair.Second + number;
+            return result;
         }
+        
         public static Pair operator ++(Pair pair)
         {
             pair.First += 1;
